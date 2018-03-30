@@ -18,19 +18,6 @@ if [ ! -d "$1" ]; then echo -e "Backup folder doesn't exist" 1>&2 && exit 1; fi
 # if amount of backups is a number
 if [[ $2 != ?(-)+([0-9]) ]]; then echo -e "Second argument is not a number\nscript launch parameters: ./backup.sh [/path/to/backup/folder] [number of backups]" 1>&2 & exit 1; fi
 
-#if [ $# -gt 2 ]
-#  then
-#    echo -e "More than 2 arguments supplied\nscript launch parameters: ./backup.sh [/path/to/backup/folder] [number of backups]" 1>&2
-#    exit 1
-#  else#
-#    if [ -z $(echo $1 | sed 's/^[ \t]*//') ] || [ -z $(echo $2 | sed 's/^[ \t]*//') ]; then
-#	echo -e "At least one of the arguments is empty\nscript launch parameters: ./backup.sh [/path/to/backup/folder] [number of backups]" 1>&2
-#	exit 1
-#     else
-#	[[ $2 != ?(-)+([0-9]) ]] && echo -e "Second argument is not a number\nscript launch parameters: ./backup.sh [/path/to/backup/folder] [number of backups]" 1>&2 && exit 1
-#    fi
-#fi
-
 ###
 # Print backuped directory and stored backup numbers
 ###
